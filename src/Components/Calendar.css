@@ -1,0 +1,63 @@
+.Calendar {
+  background: #fefefe;
+  font-size: 0.9rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  display: inline-block;
+  /* width: 20rem;
+    height: 20rem; */
+}
+.Calendar .grid {
+  padding: 1rem;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 2rem);
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 0.3rem;
+}
+.Calendar .grid .day {
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Calendar .grid .day.fade {
+  font-weight: normal;
+  color: grey;
+}
+.Calendar .grid .day.today {
+  /* font-weight: 800; */
+  /* font-weight: normal; */
+  border: 1px solid #0090fc;
+  color: #0090fc;
+}
+
+.Calendar .grid .day.selected {
+  /* font-weight: 800; */
+  /* font-weight: normal; */
+  color: white;
+  background: #0090fc;
+}
+
+.Calendar .controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  font-weight: bold;
+}
+.Calendar .controls button {
+  background: none;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
